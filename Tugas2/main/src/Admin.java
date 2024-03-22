@@ -11,6 +11,7 @@ public class Admin {
         this.studentList = new ArrayList<>();
     }
 
+    @SuppressWarnings("resource")
     public void addStudent() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter student name:");
@@ -28,6 +29,7 @@ public class Admin {
         studentList.add("Name: " + name + ", NIM: " + nim + ", Faculty: " + faculty + ", Program Study: " + programStudi);
         System.out.println("Student " + name + " successfully added!");
         Main.menuAdmin();
+        scanner.close();
     }
 
     public void displayStudent() {

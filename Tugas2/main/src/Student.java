@@ -9,7 +9,7 @@ public class Student {
         this.programStudi = programStudi;
     }
 
-    public static void displayBooks(String[] bookList) {
+    public void displayBooks(String[] bookList) {
         System.out.println("==== Book List ====");
         System.out.println("ID\tNama Buku\tAuthor\tCategory\tStock");
         for (String book : bookList) {

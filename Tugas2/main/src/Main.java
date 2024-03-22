@@ -17,7 +17,7 @@ public class Main {
         String username;
         String password;
         Scanner keyboard = new Scanner(System.in);
-        Admin admin = new Admin("admin","admIn");
+        Admin admin = new Admin("admin","admin");
         System.out.println("==== Library System ====");
         System.out.println("1. Login sebagai mahasiswa");
         System.out.println("2. Login sebagai admin");
@@ -37,7 +37,7 @@ public class Main {
                 if (username.equals(admin.adminuser)&&password.equals(admin.adminpw)){
                     menuAdmin();
                 } else {
-                    System.out.print("Tidak berhasil login sebagai Dosen!");
+                    System.out.print("Tidak berhasil login sebagai Admin!");
                 }
                 break;
             case 3:
@@ -99,6 +99,7 @@ public class Main {
                     loop = 0;
                     break;
             }
+            scanner.close();
         } while (loop == 1);
     }
 
